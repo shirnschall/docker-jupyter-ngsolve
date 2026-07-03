@@ -19,6 +19,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN pip install --no-cache-dir \
     jupyterlab \
     jupyter-resource-usage \
+    jupytext \
     ngsolve \
     anywidget \
     webgpu \
@@ -29,7 +30,9 @@ RUN pip install --no-cache-dir \
     plotly \
     numpy \
     scipy \
-    tqdm
+    tqdm \
+    pathlib \
+    pytest
 
 # Notebook working directory — mount your TrueNAS SSD dataset here
 # A second mount point, /vault-user, is intended for your HDD array
